@@ -19,10 +19,31 @@ class ViewController: UIViewController {
     }
     
     @IBAction func displayGreeting(_ sender: UIButton) {
-        
+        showAlert()
     }
     
-
+    func showAlert()
+    {
+        let fName = firstName.text!
+        let lName = lastName.text!
+        
+        let title = "Greeting"
+        let message = "Hello \(fName) \(lName)"
+        
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        
+        let action = UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: nil)
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
+    }
 
 }
 
