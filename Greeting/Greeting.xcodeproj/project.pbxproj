@@ -14,6 +14,7 @@
 		8013DA392C41E2B30098AF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8013DA382C41E2B30098AF2A /* Assets.xcassets */; };
 		8013DA3C2C41E2B30098AF2A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8013DA3B2C41E2B30098AF2A /* Base */; };
 		8019CA152C4B244C00D2624D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019CA142C4B244C00D2624D /* DetailsViewController.swift */; };
+		80E81F482C5459FA000D6B4D /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E81F472C5459FA000D6B4D /* ToDoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8013DA3B2C41E2B30098AF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8013DA3D2C41E2B30098AF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8019CA142C4B244C00D2624D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		80E81F472C5459FA000D6B4D /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8013DA3A2C41E2B30098AF2A /* LaunchScreen.storyboard */,
 				8013DA3D2C41E2B30098AF2A /* Info.plist */,
 				8019CA142C4B244C00D2624D /* DetailsViewController.swift */,
+				80E81F472C5459FA000D6B4D /* ToDoTableViewController.swift */,
 			);
 			path = Greeting;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				8013DA302C41E2B10098AF2A /* AppDelegate.swift in Sources */,
 				8013DA322C41E2B10098AF2A /* SceneDelegate.swift in Sources */,
 				8019CA152C4B244C00D2624D /* DetailsViewController.swift in Sources */,
+				80E81F482C5459FA000D6B4D /* ToDoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
