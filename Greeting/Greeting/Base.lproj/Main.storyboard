@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -179,14 +180,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ToDolistitem" id="p4g-Pq-WTq">
-                                <rect key="frame" x="0.0" y="50" width="393" height="44.333332061767578"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p4g-Pq-WTq" id="IGg-gY-wry">
-                                    <rect key="frame" x="0.0" y="0.0" width="349" height="44.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="349" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34z-aK-rQA">
-                                            <rect key="frame" x="20" y="11.000000000000002" width="303" height="21.666666666666671"/>
+                                            <rect key="frame" x="20" y="11" width="303" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -212,18 +213,71 @@
             </objects>
             <point key="canvasLocation" x="52.671755725190835" y="693.66197183098598"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="2NQ-wT-f5s">
+            <objects>
+                <viewController id="OUd-EW-U5V" customClass="MapViewController" customModule="Greeting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nft-HE-OEX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ufv-xU-obq">
+                                <rect key="frame" x="0.0" y="59" width="393" height="510"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5de-gA-HBU">
+                                <rect key="frame" x="166.66666666666666" y="659" width="60" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="User"/>
+                                <connections>
+                                    <action selector="showUser" destination="OUd-EW-U5V" eventType="touchUpInside" id="bJm-bp-H75"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvK-Ev-KZj">
+                                <rect key="frame" x="136" y="594" width="121" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Location"/>
+                                <connections>
+                                    <action selector="getLocation" destination="OUd-EW-U5V" eventType="touchUpInside" id="O62-6Q-3wq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XXT-b5-fn7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XXT-b5-fn7" firstAttribute="bottom" secondItem="Ufv-xU-obq" secondAttribute="bottom" constant="200" id="1Yl-nv-U6t"/>
+                            <constraint firstItem="XXT-b5-fn7" firstAttribute="trailing" secondItem="Ufv-xU-obq" secondAttribute="trailing" id="QCI-9x-WMI"/>
+                            <constraint firstItem="5de-gA-HBU" firstAttribute="centerX" secondItem="nft-HE-OEX" secondAttribute="centerX" id="XDh-ZZ-KFx"/>
+                            <constraint firstItem="XXT-b5-fn7" firstAttribute="bottom" secondItem="5de-gA-HBU" secondAttribute="bottom" constant="75" id="bAO-u2-ILi"/>
+                            <constraint firstItem="EvK-Ev-KZj" firstAttribute="centerX" secondItem="nft-HE-OEX" secondAttribute="centerX" id="enH-wc-48z"/>
+                            <constraint firstItem="Ufv-xU-obq" firstAttribute="top" secondItem="XXT-b5-fn7" secondAttribute="top" id="g33-oq-bRr"/>
+                            <constraint firstItem="5de-gA-HBU" firstAttribute="top" secondItem="EvK-Ev-KZj" secondAttribute="bottom" constant="30" id="hxq-Lx-6rV"/>
+                            <constraint firstItem="Ufv-xU-obq" firstAttribute="leading" secondItem="XXT-b5-fn7" secondAttribute="leading" id="ylW-Xi-yEd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="arrowshape.left.arrowshape.right.fill" catalog="system" id="VAC-Mq-eQP"/>
+                    <connections>
+                        <outlet property="mapView" destination="Ufv-xU-obq" id="fUe-T9-yzA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aQ-00-sod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="706"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WN2-hf-aiI">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gJy-OO-BtZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lMR-Sp-wAf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="pMO-B8-gTq" kind="relationship" relationship="viewControllers" id="t7e-aj-YkL"/>
                         <segue destination="1Et-Kc-1DO" kind="relationship" relationship="viewControllers" id="LKn-9W-iW2"/>
+                        <segue destination="OUd-EW-U5V" kind="relationship" relationship="viewControllers" id="PLk-Io-Cb1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUj-UK-OdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -232,6 +286,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.left.arrowshape.right.fill" catalog="system" width="128" height="54"/>
         <image name="list.clipboard.fill" catalog="system" width="98" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
